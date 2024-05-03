@@ -426,17 +426,18 @@ html body #main-outlet {
       border-bottom: none;
     }
     display: contents;
+    // https://files.slack.com/files-pri/T0549FBQZSS-F070DEKPACR/img_5774.png
     .topic-list-data.default {
-      width: 63%;
+      width: 40%;
     }
     .topic-list-data.posters {
-      width: 7%;
+      width: 10%;
     }
     .topic-list-data.posts {
-      width: 15%;
+      width: 25%;
     }
     .topic-list-data.activity {
-      width: 15%;
+      width: 25%;
     }
   }
   .topic-list-body {
@@ -760,7 +761,7 @@ html body #main-outlet {
   border-radius: 0px !important;
   box-shadow: none !important;
   background-color: var(--white); 
-  min-width: 135px !important;
+  // min-width: 135px !important;
 }
 
 
@@ -774,7 +775,7 @@ html body #main-outlet {
   display: none;
 }
 .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner{
-  display: flex;
+  // display: flex;
   margin-top: auto;
   margin-bottom: auto;
   /* Pills */
@@ -812,7 +813,6 @@ html body #main-outlet {
 
 // Main post container
 .container.posts{
-  padding: 16px;
   gap: 8px;
   border-radius: 8px;
   //border: 1px solid #000;
@@ -850,6 +850,7 @@ html body #main-outlet {
 // Topic block
 .topic-post.clearfix.topic-owner.regular{
   padding-top: 0px;
+  width: 100%;
 }
 
 // Topic avatar
@@ -875,13 +876,14 @@ html body #main-outlet {
 
 // Topic title
 #main-outlet > .regular > #topic-title{
+  box-sizing: border-box;
   padding: 16px;
   padding-top: 4px;
   padding-bottom: 16px !important;
   margin-bottom: 0px !important;
   border-bottom: 1px solid #b6b6b6;
   background-color: var(--white);
-  width: 110% !important;
+  width: 100% !important;
   padding-left: -100px;
   margin-left: auto;
   margin-right: auto;
@@ -1023,6 +1025,17 @@ html body #main-outlet {
 // Fix "categories" image sizes
 .category-logo > img {
   width: fit-content !important;
+}
+
+// override category boxes when on mobile
+@media screen and (max-width: 480px) {
+  .category-logo > img {
+    width: 0px !important;
+  }
+
+  .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner .category-logo {
+    width: 5px;
+  }
 }
 
 
@@ -1188,9 +1201,6 @@ html body #main-outlet {
   background-color: #bbe3fe !important;
 }
 
-.user-content {
-  padding: 24px !important;
-}
 
 .topic-list-body > .topic-list-item > .topic-list-data > .topic-excerpt{
   display: -webkit-box !important;
@@ -1201,7 +1211,7 @@ html body #main-outlet {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
 
   .navigation-container{
     padding-top: 12px !important
@@ -1210,7 +1220,7 @@ html body #main-outlet {
 
   .container.list-container {
     padding-top: 12px;
-    padding-inline: 20px !important;
+    padding-inline: 0px !important;
   } 
 
   
@@ -1218,6 +1228,7 @@ html body #main-outlet {
     .background-container{
       height: 0vh;
     }
+    box-sizing: border-box;
   }
 
   .topic-map section{ 
@@ -1261,8 +1272,8 @@ html body #main-outlet {
   }
 
   .user-content{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 
   #main-outlet-wrapper {
