@@ -2,28 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 @font-face {
   font-family: 'Stinger-Fit-Regular';
-  src: url('https://uploads-ssl.webflow.com/625039ed60369d0b7b026157/6256010745d3083405759e31_Stinger-Fit-Regular.woff') format('woff');
+  src: url('https://uploads-ssl.webflow.com/625039ed60369d0b7b026157/6256010745d3083405759e31_Stinger-Fit-Regular.woff')
+    format('woff');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope');
 // add variables - Aleksandr
 :root {
-  --primary-blue-mid: #44A1E5;
-  --primary-orange-light: #EB864C;
-  --primary-orange-default: #F3AC5B;
-  --white: #FFFFFF;
+  --primary-blue-mid: #44a1e5;
+  --primary-orange-light: #eb864c;
+  --primary-orange-default: #f3ac5b;
+  --white: #ffffff;
   --grey: #8e8e8e;
   --black: #000000;
   --d-selected: #45a1e5;
-  --primary-high-or-secondary-low: var(--black) !important; 
+  --primary-high-or-secondary-low: var(--black) !important;
 }
 
 // custom search banner customizations
 
 .custom-search-banner-wrap {
-  padding: 0px 0px 0px 0px !important; 
-  margin-top: 0px; 
-  background-image: url($banner_desktop_no_outline);      
+  padding: 0px 0px 0px 0px !important;
+  margin-top: 0px;
+  background-image: url($banner_desktop_no_outline);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -35,8 +36,8 @@
 
   // height: 200px;
   height: 350px;
-  
-  //background-color: #f0f7fb; 
+
+  //background-color: #f0f7fb;
 
   color: var(--secondary);
   h1 {
@@ -46,12 +47,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: var(--primary-white-fffff, #FFF);
+    color: var(--primary-white-fffff, #fff);
     font-feature-settings: 'clig' off, 'liga' off;
-  // "Welcome to the community" text 
+    // "Welcome to the community" text
     /* Card Header */
     font-family: Stinger-Fit-Regular;
-
   }
   p {
     // "Welcome to the community" subtext - Aleksandr
@@ -63,12 +63,11 @@
     font-weight: 400;
     line-height: 150%; /* 30px */
     // "Welcome to the community" subtext - Aleksandr
-
   }
   .btn {
     height: 100%;
   }
-  .search-menu input[type="text"] {
+  .search-menu input[type='text'] {
     border: 1px solid transparent;
     border-radius: 0.25em;
     min-height: 40px;
@@ -160,7 +159,7 @@
 .discourse-tags .discourse-tag.simple:not(:last-child)::after,
 .list-tags .discourse-tag.simple:not(:last-child)::after,
 .search-category .discourse-tag.simple:not(:last-child)::after {
-  content: "";
+  content: '';
   margin-left: unset;
 }
 
@@ -182,20 +181,20 @@
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'],
 .select-kit.combo-box .select-kit-header,
 .d-editor-textarea-wrapper,
 div.ac-wrap {
@@ -208,8 +207,8 @@ div.ac-wrap {
   gap: 8px;
   border-color: var(--primary-blue-mid);
   border-radius: 8px;
-  border: 1px solid var(--primary-blue-mid, #44A1E5);
-  background: #FFF;
+  border: 1px solid var(--primary-blue-mid, #44a1e5);
+  background: #fff;
 
   color: var(--primary-blue-mid);
   font-family: Manrope;
@@ -218,7 +217,6 @@ div.ac-wrap {
   line-height: normal;
   // Categories
 }
-
 
 // SVG Arrow for Categories - Aleksandr
 .select-kit-header-wrapper > svg {
@@ -230,7 +228,6 @@ div.ac-wrap {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid var(--black);
 }
-
 
 .d-header-icons .d-icon {
   border-radius: 100px;
@@ -307,13 +304,13 @@ div.ac-wrap {
 
 html {
   //body {
-    // background: linear-gradient(
-    //     0deg,
-    //     rgba(var(--primary-rgb), 0.075) 0%,
-    //     rgba(var(--primary-rgb), 0.075) 100%
-    //   ),
-    //   linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
-        // Change background to white
+  // background: linear-gradient(
+  //     0deg,
+  //     rgba(var(--primary-rgb), 0.075) 0%,
+  //     rgba(var(--primary-rgb), 0.075) 100%
+  //   ),
+  //   linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
+  // Change background to white
   //}
   .background-container {
     // Add the image
@@ -326,17 +323,16 @@ html {
     height: 60vh;
     width: 100vw;
     transform: rotate(180deg);
-  //   background: linear-gradient(
-  //     90deg,
-  //     var(--tertiary-hover) 0%,
-  //     var(--tertiary) 100%
-  //   );
-  //   clip-path: ellipse(148% 70% at 91% -14%);
-   }
+    //   background: linear-gradient(
+    //     90deg,
+    //     var(--tertiary-hover) 0%,
+    //     var(--tertiary) 100%
+    //   );
+    //   clip-path: ellipse(148% 70% at 91% -14%);
+  }
 }
 
-
-.navigation-container{
+.navigation-container {
   border-bottom: 1px solid #000 !important;
   // padding-top: 24px;
   // padding-bottom: 24px;
@@ -355,32 +351,29 @@ html {
   margin-right: 32px !important;
 }
 
-
 .container.list-container {
   padding-top: 24px;
   padding-inline: 32px !important;
 }
 
-
 // Body of the list of all posts - Aleksandr
 html body #main-outlet {
-
   //box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.07);
-  
+
   border: 1px solid #000 !important;
   border-radius: 0px !important;
-  
+
   margin-top: 30px;
   margin-bottom: 50px;
   //background: var(--secondary);
   background: var(--white);
   border-radius: 8px;
   padding: 16px 24px;
-//   padding-top: 0px !important;
-  
-//   padding-left: 0px;
-  
-//   padding-right: 0px;
+  //   padding-top: 0px !important;
+
+  //   padding-left: 0px;
+
+  //   padding-right: 0px;
 
   max-width: 1150px;
   .archetype-regular & {
@@ -442,7 +435,7 @@ html body #main-outlet {
   }
   .topic-list-body {
     display: contents;
-  
+
     .topic-list-item-separator {
       width: 100%;
       margin: 0.75em 0;
@@ -460,7 +453,7 @@ html body #main-outlet {
       // border: 1px solid rgba(var(--primary-rgb), 0.2);
       position: relative;
       //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
-      
+
       // Border and transition - Aleksandr
       overflow: hidden;
       border-radius: 1em;
@@ -470,36 +463,34 @@ html body #main-outlet {
       //
       border: none;
 
-
       a.topic-excerpt {
         color: var(--black);
       }
-    
+
       &.visited {
         //border: 1px solid rgba(var(--primary-rgb), 0.1);
         a.topic-excerpt {
-          color: var(--grey) !important;;
+          color: var(--grey) !important;
         }
         .discourse-tag {
           //opacity: 0.75;
-          
         }
         &:hover {
           //border: 1px solid rgba(var(--primary-rgb), 0.25);
           //.discourse-tag {
-            //opacity: 1;
+          //opacity: 1;
           //}
         }
       }
       &:hover {
         //background-color: var(--secondary);
         //box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-        box-shadow: 4px 4px 0px 0px #8EC8EF;
+        box-shadow: 4px 4px 0px 0px #8ec8ef;
         border: 1px solid #000;
         //border: 1px solid rgba(var(--primary-rgb), 0.3);
         //a.title:not(.badge-notification),
         //a.topic-excerpt {
-          //color: var(--primary) !important;
+        //color: var(--primary) !important;
         //}
 
         // Zoom on hover - Aleksandr
@@ -552,7 +543,8 @@ html body #main-outlet {
   justify-content: center;
   align-content: center;
   align-items: center;
-  .avatar {    margin-right: 0;
+  .avatar {
+    margin-right: 0;
     // Avatar - Aleksandr
     border-radius: 30px;
     margin-top: 10px;
@@ -659,7 +651,7 @@ html body #main-outlet {
       var(--tertiary) 100%
     );
     clip-path: ellipse(148% 70% at 91% -14%);
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     display: block;
@@ -695,10 +687,9 @@ html body #main-outlet {
   box-shadow: none;
 }
 
-
 // Buttons - Aleksandr
 
-  // Navigation Buttons
+// Navigation Buttons
 .nav > li > a.active {
   border-radius: 16px;
   background: var(--primary-orange-light) !important;
@@ -707,38 +698,37 @@ html body #main-outlet {
   color: var(--white) !important;
   background: var(--primary-orange-default) !important;
 }
-  // Navigation Buttons
+// Navigation Buttons
 
-
-  // Default Buttons
-.btn.btn-default{
+// Default Buttons
+.btn.btn-default {
   color: var(--white) !important;
   border-radius: 16px;
   background: var(--primary-orange-light) !important;
 }
 
-.btn.btn-default:hover{
+.btn.btn-default:hover {
   color: var(--white) !important;
   background: var(--primary-orange-default) !important;
 }
-.btn.btn-default>svg{
+.btn.btn-default > svg {
   fill: var(--white) !important;
 }
-  // Default Buttons
-
+// Default Buttons
 
 //Create Post Button
-.btn.btn-default#create-topic{
+.btn.btn-default#create-topic {
   background: var(--primary-blue-mid) !important;
 }
-.btn.btn-default#create-topic:hover{
+.btn.btn-default#create-topic:hover {
   background: #8ec8ef !important;
 }
 
-
 // Icon colors (for buttons)
 // Main page button
-.select-kit-header.single-select-header.dropdown-select-box-header > .select-kit-header-wrapper > svg{
+.select-kit-header.single-select-header.dropdown-select-box-header
+  > .select-kit-header-wrapper
+  > svg {
   fill: white;
 }
 // Post page button
@@ -746,13 +736,14 @@ html body #main-outlet {
   fill: white;
 }
 
-.select-kit-header.single-select-header.dropdown-select-box-header.notifications-filter-header.btn > * > *{
+.select-kit-header.single-select-header.dropdown-select-box-header.notifications-filter-header.btn
+  > *
+  > * {
   fill: white;
   color: white;
 }
-  
-  
-// Buttons 
+
+// Buttons
 
 // Category Boxes - Aleksandr
 
@@ -760,21 +751,26 @@ html body #main-outlet {
   border: 1px solid var(--black) !important;
   border-radius: 0px !important;
   box-shadow: none !important;
-  background-color: var(--white); 
+  background-color: var(--white);
   // min-width: 135px !important;
 }
 
-
-.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box:hover{
+.custom-category-boxes:not(.above-discovery-categories-outlet)
+  .category-box:hover {
   transform: scale(1.005);
-  background-color: var(--white); 
-  box-shadow: 4px 4px 0px 0px #8EC8EF !important;
+  background-color: var(--white);
+  box-shadow: 4px 4px 0px 0px #8ec8ef !important;
 }
 
-.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner .category-logo.no-logo-present {
+.custom-category-boxes:not(.above-discovery-categories-outlet)
+  .category-box
+  .category-box-inner
+  .category-logo.no-logo-present {
   display: none;
 }
-.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner{
+.custom-category-boxes:not(.above-discovery-categories-outlet)
+  .category-box
+  .category-box-inner {
   // display: flex;
   margin-top: auto;
   margin-bottom: auto;
@@ -784,8 +780,7 @@ html body #main-outlet {
   padding-right: 16px !important;
 }
 
-// Category Boxes 
-
+// Category Boxes
 
 // Change Main Page Background - Aleksandr
 // .discourse-root{
@@ -797,10 +792,10 @@ html body #main-outlet {
 //   background-size: 100%;
 //   background-position: 0px -40%;
 // }
-// Change Main Page Background 
+// Change Main Page Background
 
 // Change the way post looks like - Aleksandr
-#main-outlet > .regular{
+#main-outlet > .regular {
   display: flex;
   padding: 16px;
   flex-direction: column;
@@ -808,19 +803,19 @@ html body #main-outlet {
   gap: 8px;
   border-radius: 8px;
   border: 0px solid #000;
-  background: #FFF;
+  background: #fff;
 }
 
 // Main post container
-.container.posts{
+.container.posts {
   gap: 8px;
   border-radius: 8px;
   //border: 1px solid #000;
-  background: #FFF;
+  background: #fff;
 }
 
 // Post content and comments container
-.post-stream{
+.post-stream {
   display: flex;
   padding: 8px;
   flex-direction: column;
@@ -829,7 +824,7 @@ html body #main-outlet {
 }
 
 // All comments
-.post-stream > *:not(:first-child) > * > * > .topic-body  {
+.post-stream > *:not(:first-child) > * > * > .topic-body {
   margin-left: 8px;
   margin-right: 64px;
   padding-left: 8px;
@@ -840,7 +835,7 @@ html body #main-outlet {
   background-color: #fffdf6;
 }
 
-.post-stream > * > * > * > .topic-body > div > div > p{
+.post-stream > * > * > * > .topic-body > div > div > p {
   font-family: Manrope;
   font-style: normal;
   font-weight: 400;
@@ -848,17 +843,17 @@ html body #main-outlet {
 }
 
 // Topic block
-.topic-post.clearfix.topic-owner.regular{
+.topic-post.clearfix.topic-owner.regular {
   padding-top: 0px;
   width: 100%;
 }
 
 // Topic avatar
-.topic-body.clearfix, .topic-avatar{
+.topic-body.clearfix,
+.topic-avatar {
   padding-right: 8px;
   border-top: none;
 }
-
 
 #main-outlet > .regular {
   overflow: hidden !important;
@@ -866,16 +861,15 @@ html body #main-outlet {
   margin-top: 0px !important;
 }
 
-#main>div #main-outlet {
-    max-width: calc(100% - 16px);
-    width: 1110px;
-    padding: 16px 24px;
-    box-sizing: border-box;
+#main > div #main-outlet {
+  max-width: calc(100% - 16px);
+  width: 1110px;
+  padding: 16px 24px;
+  box-sizing: border-box;
 }
 
-
 // Topic title
-#main-outlet > .regular > #topic-title{
+#main-outlet > .regular > #topic-title {
   box-sizing: border-box;
   padding: 16px;
   padding-top: 4px;
@@ -890,7 +884,7 @@ html body #main-outlet {
   overflow: hidden;
 }
 
-#main-outlet > .regular > #topic-title > .container > .title-wrapper > h1{
+#main-outlet > .regular > #topic-title > .container > .title-wrapper > h1 {
   color: #000;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Manrope;
@@ -900,7 +894,13 @@ html body #main-outlet {
   padding-bottom: 8px;
 }
 
-#main-outlet > .regular > #topic-title > .container > .title-wrapper > h1 > .edit-topic{
+#main-outlet
+  > .regular
+  > #topic-title
+  > .container
+  > .title-wrapper
+  > h1
+  > .edit-topic {
   display: none;
 }
 
@@ -916,24 +916,22 @@ html body #main-outlet {
   padding-top: 0px;
 }
 
-
-.topic-timer-info{
+.topic-timer-info {
   display: none;
 }
 
-.post-menu-area.clearfix{
+.post-menu-area.clearfix {
   margin: 0px;
   padding: 0px;
 }
 
-
 // Topic block inner
-.topic-map{
+.topic-map {
   border: 0px solid #000;
 }
 
 // Topic block inner
-.topic-map section{
+.topic-map section {
   margin: 32px 8px 8px 0px;
   padding: 0px 0px 0px 0px;
   border: 1px solid #b6b6b6 !important;
@@ -942,32 +940,29 @@ html body #main-outlet {
   background-color: var(--white);
 }
 
-
 // Menu with buttons, add padding
-.menu-tabs-container > *{
+.menu-tabs-container > * {
   padding: 8px;
 }
 
 // Buttons in the menu, add margin
-.user-menu-tab{
+.user-menu-tab {
 }
 
 // Active icon
-.user-menu-tab.active > svg{
-  fill: white; 
+.user-menu-tab.active > svg {
+  fill: white;
 }
-
 
 // Notifcation color to red
-.chat-channel-unread-indicator{
+.chat-channel-unread-indicator {
   background-color: red !important;
 }
-.badge-notification{
+.badge-notification {
   background-color: red !important;
 }
 
-
-.d-editor-button-bar > *{
+.d-editor-button-bar > * {
   margin-left: 8px !important;
   margin-right: 8px !important;
   margin-top: 4px !important;
@@ -979,15 +974,14 @@ html body #main-outlet {
 }
 
 // Notifications
-.reviewable.pending{
+.reviewable.pending {
   // border-radius: 8px !important;
   // margin-top: 4px;
   // margin-bottom: 4px;
 }
 
-
 // User settings
-.quick-access-panel > *  {
+.quick-access-panel > * {
   border-radius: 8px !important;
   height: fit-content !important;
   max-height: fit-content !important;
@@ -995,21 +989,21 @@ html body #main-outlet {
   background-color: #e3f1fb !important;
 }
 
-.nav-pills.action-list.main-nav.user-nav > * > *{
+.nav-pills.action-list.main-nav.user-nav > * > * {
   border-radius: 0px !important;
   background-color: white !important;
 }
-.nav-pills.action-list.main-nav.user-nav > * > *:hover{
+.nav-pills.action-list.main-nav.user-nav > * > *:hover {
   color: black !important;
 }
 
-.nav-pills.action-list > * > *{
+.nav-pills.action-list > * > * {
   border-radius: 0px !important;
 }
 //User settings
 
-// Change the way post looks like 
-.username{
+// Change the way post looks like
+.username {
   color: var(--black) !important;
   font-feature-settings: 'clig' off, 'liga' off;
   /* headings/H4 */
@@ -1033,14 +1027,16 @@ html body #main-outlet {
     width: 0px !important;
   }
 
-  .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner .category-logo {
+  .custom-category-boxes:not(.above-discovery-categories-outlet)
+    .category-box
+    .category-box-inner
+    .category-logo {
     width: 5px;
   }
 }
 
-
 // Fix navigation pill: reverse select and active color + add spacing
-.admin-main-nav  > .nav.nav-pills {
+.admin-main-nav > .nav.nav-pills {
   gap: 8px;
   margin-top: 16px;
 }
@@ -1056,22 +1052,20 @@ html body #main-outlet {
 // }
 // Fix navigation pill: reverse select and active color + add spacing
 
-
 // Hide search widget
-.search-widget{
+.search-widget {
   display: none !important;
 }
 
-
 // Group boxes
-.groups-boxes > .group-box{
+.groups-boxes > .group-box {
   border-radius: 0px !important;
   border: 1px solid #000 !important;
   padding: 16px !important;
   box-shadow: none !important;
 }
 
-.groups-boxes > .group-box:hover{
+.groups-boxes > .group-box:hover {
   box-shadow: 4px 4px 0px 0px #336d96 !important;
 }
 
@@ -1080,7 +1074,7 @@ html body #main-outlet {
   margin: 0px;
 }
 
-.groups-boxes > .group-box > .group-box-inner > .group-info-wrapper{
+.groups-boxes > .group-box > .group-box-inner > .group-info-wrapper {
   font-family: Stinger-Fit-Regular;
   font-feature-settings: 'clig' off, 'liga' off;
   font-style: normal;
@@ -1106,14 +1100,13 @@ html body #main-outlet {
   color: black;
 }
 
-
-.select-kit-collection > *[data-value="select"],*[data-value="copyLink"]{
+.select-kit-collection > *[data-value='select'],
+*[data-value='copyLink'] {
   background-color: red;
   display: none !important;
 }
 
-
-#quick-access-profile > *[aria-labelledby="user-menu-button-profile"] {
+#quick-access-profile > *[aria-labelledby='user-menu-button-profile'] {
   display: flex;
   flex-direction: column;
   gap: 0px !important;
@@ -1121,7 +1114,7 @@ html body #main-outlet {
   background-color: transparent !important;
 }
 
-#quick-access-profile > *[aria-labelledby="user-menu-button-profile"] > li {
+#quick-access-profile > *[aria-labelledby='user-menu-button-profile'] > li {
   margin: 0px 0px !important;
   padding: 0px 0px !important;
   border-radius: 4px !important;
@@ -1129,23 +1122,31 @@ html body #main-outlet {
   font-size: 16px !important;
 }
 
-#quick-access-profile > *[aria-labelledby="user-menu-button-profile"] > li > a {
+#quick-access-profile > *[aria-labelledby='user-menu-button-profile'] > li > a {
   height: 38px !important;
 }
 
-#quick-access-profile > *[aria-labelledby="user-menu-button-profile"] > li > * > svg{
+#quick-access-profile
+  > *[aria-labelledby='user-menu-button-profile']
+  > li
+  > *
+  > svg {
   display: none !important;
 }
 
-.map.map-collapsed > .buttons{
+.map.map-collapsed > .buttons {
   display: none !important;
 }
 
-.map.map-collapsed  > ul > .created-at,.last-reply,.replies,.views,.users{
+.map.map-collapsed > ul > .created-at,
+.last-reply,
+.replies,
+.views,
+.users {
   display: none !important;
 }
 
-.map.map-collapsed  > ul > .likes {
+.map.map-collapsed > ul > .likes {
   height: fit-content !important;
   text-align: center !important;
   margin: 0 !important;
@@ -1153,8 +1154,8 @@ html body #main-outlet {
   padding-right: 0px !important;
 }
 
-.map.map-collapsed  > ul > .likes::before {
-  content: "Liked by"; 
+.map.map-collapsed > ul > .likes::before {
+  content: 'Liked by';
   font-family: Manrope;
   font-size: 14px;
   font-style: normal;
@@ -1162,7 +1163,7 @@ html body #main-outlet {
   line-height: normal;
 }
 
-.map.map-collapsed  > ul > .likes > * {
+.map.map-collapsed > ul > .likes > * {
   display: none !important;
 }
 
@@ -1187,22 +1188,21 @@ html body #main-outlet {
   box-shadow: none !important;
 }
 
-.sidebar-sections{
+.sidebar-sections {
   padding-top: 0px !important;
 }
 
-.sidebar-row{
+.sidebar-row {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
   padding-inline: 16px !important;
 }
 
-.sidebar-row.active{
+.sidebar-row.active {
   background-color: #bbe3fe !important;
 }
 
-
-.topic-list-body > .topic-list-item > .topic-list-data > .topic-excerpt{
+.topic-list-body > .topic-list-item > .topic-list-data > .topic-excerpt {
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
@@ -1210,68 +1210,63 @@ html body #main-outlet {
   text-overflow: ellipsis !important;
 }
 
-
 @media screen and (max-width: 480px) {
-
-  .navigation-container{
-    padding-top: 12px !important
+  .navigation-container {
+    padding-top: 12px !important;
   }
-
 
   .container.list-container {
     padding-top: 12px;
     padding-inline: 0px !important;
-  } 
+  }
 
-  
-  html{
-    .background-container{
+  html {
+    .background-container {
       height: 0vh;
     }
     box-sizing: border-box;
   }
 
-  .topic-map section{ 
+  .topic-map section {
     display: none !important;
   }
 
-  .custom-search-banner-wrap{
+  .custom-search-banner-wrap {
     background-image: none;
     height: fit-content;
     border: 0px;
     background-color: transparent;
   }
-  
 
-  .custom-search-banner{
-      background-image: url($banner_no_outline);      
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-      // width: 100vw;
-      // height: 200px;
-      width: 100%; /* Adjust as needed */
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 25%; /* Maintain the aspect ratio (height / width) */
-      background-color: #f0f7fb;
-      background-position: bottom;
-      border: 1px solid #000; /* Transparent border to reserve space for the inner border */
-      border-top: 0px;
-      margin-bottom: 22.5px;
+  .custom-search-banner {
+    background-image: url($banner_no_outline);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    // width: 100vw;
+    // height: 200px;
+    width: 100%; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25%; /* Maintain the aspect ratio (height / width) */
+    background-color: #f0f7fb;
+    background-position: bottom;
+    border: 1px solid #000; /* Transparent border to reserve space for the inner border */
+    border-top: 0px;
+    margin-bottom: 22.5px;
   }
 
-  #main-outlet{
+  #main-outlet {
     margin-top: 0px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  
+
   .custom-search-banner > * {
     padding-top: 64px !important;
   }
 
-  .user-content{
+  .user-content {
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -1279,8 +1274,8 @@ html body #main-outlet {
   #main-outlet-wrapper {
     margin: 0px !important;
   }
- 
-  .topic-list-body > .topic-list-item > .topic-list-data > .topic-excerpt{
+
+  .topic-list-body > .topic-list-item > .topic-list-data > .topic-excerpt {
     display: -webkit-box !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
@@ -1288,5 +1283,16 @@ html body #main-outlet {
     text-overflow: ellipsis !important;
   }
 }
-  
-// Change Main Page Background 
+
+// Change Main Page Background
+
+// override versatile banner
+// from: https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size
+#main .banner-box {
+  background-size: contain;
+  background-color: #f0f7fb;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 15.64%;
+}
