@@ -10,7 +10,8 @@
   "assets": {
     "banner_desktop": "assets/banner_desktop.svg",
     "banner_desktop_no_outline": "assets/banner_desktop_no_outline.svg",
-    "banner_no_outline": "assets/banner_no_outline.svg"
+    "banner_no_outline": "assets/banner_no_outline.svg",
+    "kadaspace_banner": "assets/kadaspace_banner.svg"
   },
   "color_schemes": {
     "Light": {
