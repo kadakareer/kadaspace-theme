@@ -113,15 +113,6 @@
   margin: 1em 0;
 }
 
-// .topic-list .topic-list-header .topic-list-data,
-// .topic-list .topic-list-item .topic-list-data {
-//   padding: 15px 5px;
-// }
-
-// .navigation-topics .topic-list .topic-list-body .topic-list-data,
-// .navigation-topics .topic-list .topic-list-header .topic-list-data {
-//   flex: unset;
-// }
 
 .badge-wrapper.box {
   border-radius: 0.25em;
@@ -397,16 +388,6 @@ html body #main-outlet {
 .nav-pills:not(.user-nav) > li a.active,
 .nav-pills:not(.user-nav) > li > a {
   border-radius: 0.5em;
-}
-// Topic List
-
-@keyframes background-fade-highlight {
-  0% {
-    background-color: var(--highlight-low);
-  }
-  100% {
-    background-color: var(--secondary);
-  }
 }
 
 
@@ -1006,13 +987,13 @@ html body #main-outlet {
   display: none !important;
 }
 
-// .map.map-collapsed > ul > .created-at,
-// .last-reply,
-// .replies,
-// .views,
-// .users {
-//   display: none !important;
-// }
+.map.map-collapsed > ul > .created-at,
+.last-reply,
+.replies,
+.views,
+.users {
+  display: none !important;
+}
 
 .map.map-collapsed > ul > .likes {
   height: fit-content !important;
