@@ -113,15 +113,15 @@
   margin: 1em 0;
 }
 
-.topic-list .topic-list-header .topic-list-data,
-.topic-list .topic-list-item .topic-list-data {
-  padding: 15px 5px;
-}
+// .topic-list .topic-list-header .topic-list-data,
+// .topic-list .topic-list-item .topic-list-data {
+//   padding: 15px 5px;
+// }
 
-.navigation-topics .topic-list .topic-list-body .topic-list-data,
-.navigation-topics .topic-list .topic-list-header .topic-list-data {
-  flex: unset;
-}
+// .navigation-topics .topic-list .topic-list-body .topic-list-data,
+// .navigation-topics .topic-list .topic-list-header .topic-list-data {
+//   flex: unset;
+// }
 
 .badge-wrapper.box {
   border-radius: 0.25em;
@@ -409,216 +409,83 @@ html body #main-outlet {
   }
 }
 
-.full-width .contents .topic-list {
-  border-collapse: separate;
-  border-spacing: 0 0.25em;
-  display: contents;
-  .topic-list-header {
-    tr {
-      display: flex;
-      border-bottom: none;
-    }
-    display: contents;
-    // https://files.slack.com/files-pri/T0549FBQZSS-F070DEKPACR/img_5774.png
-    .topic-list-data.default {
-      width: 40%;
-    }
-    .topic-list-data.posters {
-      width: 10%;
-    }
-    .topic-list-data.posts {
-      width: 25%;
-    }
-    .topic-list-data.activity {
-      width: 25%;
-    }
-  }
-  .topic-list-body {
-    display: contents;
 
-    .topic-list-item-separator {
-      width: 100%;
-      margin: 0.75em 0;
-      display: flex;
-      .topic-list-data {
-        width: 100%;
-      }
-    }
-    // Post - Aleksandr
-    .topic-list-item {
-      width: 100%;
-      display: flex;
-      margin-bottom: 0.5em;
-      background-color: var(--white);
-      // border: 1px solid rgba(var(--primary-rgb), 0.2);
-      position: relative;
-      //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
-
-      // Border and transition - Aleksandr
-      overflow: hidden;
-      border-radius: 1em;
-      // border: 1px solid #000;
-      transition: all 0.3s ease-in-out;
-      transition: box-shadow 0.2s ease-in-out;
-      //
-      border: none;
-
-      a.topic-excerpt {
-        color: var(--black);
-      }
-
-      &.visited {
-        //border: 1px solid rgba(var(--primary-rgb), 0.1);
-        a.topic-excerpt {
-          color: var(--grey) !important;
-        }
-        .discourse-tag {
-          //opacity: 0.75;
-        }
-        &:hover {
-          //border: 1px solid rgba(var(--primary-rgb), 0.25);
-          //.discourse-tag {
-          //opacity: 1;
-          //}
-        }
-      }
-      &:hover {
-        //background-color: var(--secondary);
-        //box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-        box-shadow: 4px 4px 0px 0px #8ec8ef;
-        border: 1px solid #000;
-        //border: 1px solid rgba(var(--primary-rgb), 0.3);
-        //a.title:not(.badge-notification),
-        //a.topic-excerpt {
-        //color: var(--primary) !important;
-        //}
-
-        // Zoom on hover - Aleksandr
-        transform: scale(1.005);
-        //
-      }
-      .topic-list-data.main-link {
-        width: 63%;
-        order: 2;
-      }
-      .topic-list-data.posters {
-        width: 7%;
-        order: 1;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a:not(.latest) {
-          display: none;
-        }
-      }
-      .topic-list-data.posts {
-        width: 15%;
-        order: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .topic-list-data.age {
-        width: 15%;
-        order: 4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    // Post
-  }
-}
-
-.topic-list-data.num.views {
-  display: none;
-}
-
-.full-width .contents .topic-list .topic-list-item .posters a.latest {
-  margin-right: 4px;
+//  CONTROL LISTING OF TOPICS
+.topic-list tr {
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-direction: row;
+  border-bottom: unset;
   align-items: center;
-  .avatar {
-    margin-right: 0;
-    // Avatar - Aleksandr
-    border-radius: 30px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: auto;
+  overflow-x: hidden;
+  .posters,
+  .topic-list-data.posters {
+    order: 1;
+    display: block;
+    flex: 0 0 5%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    // hide everyone else except original poster
+    *:not(:first-child) {
+      display: none;
+    }
+
+    // style original poster
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .default,
+  .main-link {
+    order: 2;
+    flex: 1 0; // make this grow
+    min-height: 100%;
+
+    // adjust contents of main-link
+    .title {
+      font-weight: bold;
+    }
+    .link-area {
+      display: flex;
+      .link-title-area { // unsure
+        margin-right: 1em;
+        font-size: $font-up-1;
+      }
+      .link-meta-area { // unsure
+        font-size: $font-down-3;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .posts {
+    order: 3;
+    flex: 0 0 10%;
+  }
+  .views {
+    order: 4;
+    flex: 0 0 10%;
+  }
+  .activity {
+    order: 5;
+    flex: 0 0 10%;
   }
 }
 
-.full-width .contents .topic-list {
-  .topic-list-item {
-    .main-link {
-      min-height: 100%;
-      min-height: 100%;
-      .link-top-line {
-        display: block;
-        margin-bottom: 0.25em;
-      }
-      .title {
-        font-weight: bold;
-      }
-      .link-area {
-        display: flex;
-        .link-title-area {
-          margin-right: 1em;
-          font-size: $font-up-1;
-        }
-        .link-meta-area {
-          font-size: $font-down-3;
-          display: flex;
-          align-items: center;
-        }
-      }
-    }
-    .posters {
-      .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-      }
-      a.latest {
-        .avatar {
-          margin-right: 0;
-        }
-      }
-      a:not(.latest) {
-        margin-left: -22px;
-        .avatar {
-          border: 3px solid var(--secondary);
-        }
-      }
-    }
-    .posts-map,
-    .num.age.activity {
-      a {
-        padding: 0;
-      }
-    }
-    .posts-map {
-      position: relative;
-      .number {
-        margin-right: 0.25em;
-      }
-    }
-    .post-activity {
-      .d-icon-reply {
-        color: var(--primary-medium);
-        margin-right: 0.25em;
-      }
-      .relative-date {
-        color: var(--primary-medium);
-      }
-    }
+.topic-list-item {
+  &:hover {
+    transform: scale(1.005);
+    box-shadow: 4px 4px 0px 0px #8ec8ef;
+    border: 1px solid #000;
+    border-radius: 1em;
   }
 }
+
 
 .navigation-container {
   margin-top: 2em;
@@ -866,6 +733,7 @@ html body #main-outlet {
   width: 1110px;
   padding: 16px 24px;
   box-sizing: border-box;
+  overflow-x: scroll;
 }
 
 // Topic title
@@ -1138,13 +1006,13 @@ html body #main-outlet {
   display: none !important;
 }
 
-.map.map-collapsed > ul > .created-at,
-.last-reply,
-.replies,
-.views,
-.users {
-  display: none !important;
-}
+// .map.map-collapsed > ul > .created-at,
+// .last-reply,
+// .replies,
+// .views,
+// .users {
+//   display: none !important;
+// }
 
 .map.map-collapsed > ul > .likes {
   height: fit-content !important;
