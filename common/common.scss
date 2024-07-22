@@ -538,11 +538,24 @@ html body #main-outlet {
 // Buttons - Aleksandr
 
 // Navigation Buttons
-.nav > li > a.active {
+.nav-pills > li > a.active {
   border-radius: 16px;
+  border-bottom: unset;
+  color: white;
   background: var(--primary-orange-light) !important;
 }
-.nav > li > a:hover {
+
+// Remove the underline on active buttons
+.nav-pills>li a.active:after, .nav-pills>li button.active:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: unset;
+}
+
+.nav-pills > li > a:hover {
   color: var(--white) !important;
   background: var(--primary-orange-default) !important;
 }
